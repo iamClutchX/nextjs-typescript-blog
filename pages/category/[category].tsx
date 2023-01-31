@@ -17,6 +17,7 @@ import { capitalizeFirstLetter, debounce, makeCategory } from '../../utils';
 import Pagination from '../../components/Pagination';
 import { useRouter } from 'next/router';
 
+
 interface IPropType {
     categories: {
         items: ICategory[];
@@ -29,9 +30,10 @@ interface IPropType {
     slug: string;
 }
 
-const category = ({ categories, articles, slug }: IPropType) => {
+const Category = ({ categories, articles, slug }: IPropType) => {
     const { page, pageCount } = articles.pagination;
     const router = useRouter();
+  
     const { category: categorySlug } = router.query;
 
     const formattedCategory = () => {
@@ -112,4 +114,4 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
     };
 };
 
-export default category;
+export default Category;
