@@ -13,9 +13,6 @@ const navigation = [
   { name: "Calendar", href: "/", current: false },
 ];
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
 
 export default function Example() {
   return (
@@ -98,10 +95,8 @@ export default function Example() {
                         {({ active }) => (
                           <a
                             href="#"
-                            className={classNames(
-                              active ? "bg-gray-100" : "",
-                              "block px-4 py-2 text-sm text-gray-700"
-                            )}
+                            className="block px-4 py-2 text-sm text-gray-700"
+                            
                           >
                             Your Profile
                           </a>
@@ -111,10 +106,7 @@ export default function Example() {
                         {({ active }) => (
                           <a
                             href="#"
-                            className={classNames(
-                              active ? "bg-gray-100" : "",
-                              "block px-4 py-2 text-sm text-gray-700"
-                            )}
+                            className="block px-4 py-2 text-sm text-gray-700"
                           >
                             Settings
                           </a>
@@ -124,10 +116,7 @@ export default function Example() {
                         {({ active }) => (
                           <a
                             href="#"
-                            className={classNames(
-                              active ? "bg-gray-100" : "",
-                              "block px-4 py-2 text-sm text-gray-700"
-                            )}
+                            className="block px-4 py-2 text-sm text-gray-700"
                           >
                             Sign out
                           </a>
@@ -147,12 +136,7 @@ export default function Example() {
                   key={item.name}
                   as="a"
                   href={item.href}
-                  className={classNames(
-                    item.current
-                      ? "bg-gray-900 text-white"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                    "block px-3 py-2 rounded-md text-base font-medium"
-                  )}
+                  className="text-gray-800 hover:bg-primary hover:text-white block px-3 py-3 rounded-md text-base font-medium"
                   aria-current={item.current ? "page" : undefined}
                 >
                   {item.name}
